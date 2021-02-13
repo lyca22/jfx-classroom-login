@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="187.0" layoutY="14.0" text="Join to Classroom">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="29.0" text="Create your account">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="85.0" text="Username:" />
+      <Label layoutX="114.0" layoutY="120.0" text="Password:" />
+      <Label layoutX="102.0" layoutY="155.0" text="Profile picture:" />
+      <Label layoutX="120.0" layoutY="186.0" text="Gender:" />
+      <Label layoutX="137.0" layoutY="213.0" text="Career:" />
+      <Label layoutX="117.0" layoutY="289.0" text="Birthday:" />
+      <Label layoutX="95.0" layoutY="325.0" text="Favorite Browser:" />
+      <TextField fx:id="txtRegisterName" layoutX="187.0" layoutY="81.0" prefHeight="25.0" prefWidth="121.0" />
+      <TextField fx:id="txtPictureDirectory" layoutX="187.0" layoutY="151.0" prefHeight="25.0" prefWidth="121.0" />
+      <RadioButton fx:id="maleButton" layoutX="187.0" layoutY="186.0" mnemonicParsing="false" onAction="#selectGender" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="femaleButton" layoutX="240.0" layoutY="186.0" mnemonicParsing="false" onAction="#selectGender" text="Female" toggleGroup="$genderGroup" />
+      <RadioButton fx:id="otherButton" layoutX="305.0" layoutY="186.0" mnemonicParsing="false" onAction="#selectGender" text="Other" toggleGroup="$genderGroup" />
+      <CheckBox fx:id="softwareBox" layoutX="187.0" layoutY="213.0" mnemonicParsing="false" text="Software Engineering" />
+      <CheckBox fx:id="telematicBox" layoutX="187.0" layoutY="235.0" mnemonicParsing="false" text="Telematic Engineering" />
+      <CheckBox fx:id="industrialBox" layoutX="187.0" layoutY="257.0" mnemonicParsing="false" text="Industrial Engineering" />
+      <DatePicker fx:id="birthdayPicker" layoutX="180.0" layoutY="285.0" />
+      <SplitMenuButton fx:id="browserPicker" layoutX="191.0" layoutY="321.0" mnemonicParsing="false" text="Choose an option">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setChromeText" text="Google Chrome" />
+          <MenuItem mnemonicParsing="false" onAction="#setOperaText" text="Opera" />
+            <MenuItem mnemonicParsing="false" onAction="#setEdgeText" text="Microsoft Edge" />
+            <MenuItem mnemonicParsing="false" onAction="#setTorText" text="Tor" />
+        </items>
+      </SplitMenuButton>
+      <Button layoutX="328.0" layoutY="151.0" mnemonicParsing="false" onAction="#browse" text="Browse" />
+      <Button layoutX="247.0" layoutY="372.0" mnemonicParsing="false" onAction="#createAccount" text="Create account" />
+      <Button layoutX="140.0" layoutY="372.0" mnemonicParsing="false" onAction="#signIn" text="Sign In" />
+      <PasswordField fx:id="txtRegisterPassword" layoutX="187.0" layoutY="116.0" prefHeight="25.0" prefWidth="121.0" />
+   </children>
+</Pane>
